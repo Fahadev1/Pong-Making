@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cuy5bt8aec23g"]
+
+[ext_resource type="Script" uid="uid://cvxnixmyjeknr" path="res://codes/world.gd" id="1_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://c80i6ylwm50dx" path="res://scenes/wall.tscn" id="2_k0juu"]
+[ext_resource type="PackedScene" uid="uid://f6hxxbjdf3th" path="res://scenes/hud.tscn" id="2_qfnet"]
+[ext_resource type="PackedScene" uid="uid://cfkianvfrihxn" path="res://scenes/player.tscn" id="2_rwgxs"]
+[ext_resource type="PackedScene" uid="uid://dstuipxkekb87" path="res://scenes/ball.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://d52k37stbvno" path="res://scenes/detection.tscn" id="5_71j4m"]
+
+[node name="world" type="Node2D" unique_id=1084311254]
+script = ExtResource("1_4wyf3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=690809135]
+
+[node name="HUD" parent="CanvasLayer" unique_id=1316975110 instance=ExtResource("2_qfnet")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2061279081]
+z_index = -20
+offset_left = -61.0
+offset_top = -45.0
+offset_right = 1977.0
+offset_bottom = 1123.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="player" parent="." unique_id=1844908794 instance=ExtResource("2_rwgxs")]
+position = Vector2(100, 542)
+
+[node name="player2" parent="." unique_id=1743015494 instance=ExtResource("2_rwgxs")]
+position = Vector2(1820, 542)
+is_p1 = false
+
+[node name="Ball" parent="." unique_id=19789745 instance=ExtResource("3_4wyf3")]
+position = Vector2(960, 540)
+
+[node name="wall" parent="." unique_id=412463848 instance=ExtResource("2_k0juu")]
+position = Vector2(921, -10)
+
+[node name="wall2" parent="." unique_id=1875892400 instance=ExtResource("2_k0juu")]
+position = Vector2(921, 1091)
+
+[node name="detection_left" parent="." unique_id=1984290827 instance=ExtResource("5_71j4m")]
+position = Vector2(-16, 540)
+is_left_paddle = true
+
+[node name="detection_right" parent="." unique_id=799512382 instance=ExtResource("5_71j4m")]
+position = Vector2(1938, 540)
+
+[node name="Timer" type="Timer" parent="." unique_id=1753648943]
+one_shot = true

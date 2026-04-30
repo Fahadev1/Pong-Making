@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://f6hxxbjdf3th"]
+
+[ext_resource type="Script" uid="uid://1hoe6rf2y20k" path="res://codes/hud.gd" id="1_ahhtf"]
+
+[sub_resource type="FontFile" id="FontFile_toqtt"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/140/0/ascent = 0.0
+cache/0/140/0/descent = 0.0
+cache/0/140/0/underline_position = 0.0
+cache/0/140/0/underline_thickness = 0.0
+cache/0/140/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ahhtf"]
+font = SubResource("FontFile_toqtt")
+font_size = 140
+
+[sub_resource type="LabelSettings" id="LabelSettings_oo0fn"]
+font_size = 140
+
+[node name="HUD" type="Control" unique_id=1316975110]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ahhtf")
+
+[node name="LeftPoints" type="Label" parent="." unique_id=120929266]
+layout_mode = 1
+offset_right = 751.0
+offset_bottom = 371.0
+text = "0"
+label_settings = SubResource("LabelSettings_ahhtf")
+horizontal_alignment = 1
+
+[node name="RightPoints" type="Label" parent="." unique_id=796659916]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -753.0
+offset_bottom = 402.0
+grow_horizontal = 0
+text = "0"
+label_settings = SubResource("LabelSettings_oo0fn")
+horizontal_alignment = 1

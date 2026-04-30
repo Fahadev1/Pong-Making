@@ -1,0 +1,20 @@
+# Godot 4+ ignores
+.godot/
+/android/
+/ios/
+/web/
+
+# Build exports
+export.cfg
+export_presets.cfg
+build/
+dist/
+*.exe
+*.pck
+*.zip
+
+# System
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
